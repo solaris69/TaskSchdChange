@@ -20,7 +20,7 @@ namespace TaskSchdChange
           }
 
           /*INSTALL via InstallShield -> setup /V "/v/qn INSTALLDIR=C:\_vc\tasks /L*V c:\_vc\vc.log"
-           * Must be run as Administrator dos command box.
+           * Must be run as Administrator dos command box. setup_0.1.2.exe /S /V "/v/qn INSTALLDIR=C:\_vc\tasks"
            */
 
           using (TaskService tsMgr = new TaskService() )
