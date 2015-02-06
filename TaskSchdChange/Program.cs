@@ -19,6 +19,10 @@ namespace TaskSchdChange
             Environment.Exit(1);
           }
 
+          /*INSTALL via InstallShield -> setup /V "/v/qn INSTALLDIR=C:\_vc\tasks /L*V c:\_vc\vc.log"
+           * Must be run as Administrator dos command box.
+           */
+
           using (TaskService tsMgr = new TaskService() )
           {
             Task ts = tsMgr.GetTask(args[0]);
