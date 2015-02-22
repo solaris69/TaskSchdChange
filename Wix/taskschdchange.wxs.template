@@ -14,8 +14,8 @@
             <ComponentGroupRef Id="BinaryGroup"/>
         </Feature>
         <UI />
-		<Icon Id="icon.ico" SourceFile="SourceDir\icon.ico"/>
-		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+		<Icon Id="erms.ico" SourceFile="SourceDir\erms.ico"/>
+		<Property Id="ARPPRODUCTICON" Value="erms.ico" />
         <InstallExecuteSequence>
             <RemoveExistingProducts After='InstallInitialize' />
         </InstallExecuteSequence>

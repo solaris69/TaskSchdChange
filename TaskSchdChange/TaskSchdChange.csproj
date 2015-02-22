@@ -49,10 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>49BAEC79221C3384AC4283F46FB411FAF9E3417A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1656652606F4736AE28A3BCF48219069AE65334C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>TaskSchdChange_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>TaskSchdChange_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="TaskSchdChange_1_TemporaryKey.pfx" />
     <None Include="TaskSchdChange_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
