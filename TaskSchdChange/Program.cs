@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Win32.TaskScheduler;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace TaskSchdChange
 {
@@ -22,6 +24,18 @@ namespace TaskSchdChange
           /*INSTALL via InstallShield -> setup /V "/v/qn INSTALLDIR=C:\_vc\tasks /L*V c:\_vc\vc.log"
            * Must be run as Administrator dos command box. setup_0.1.2.exe /S /V "/v/qn INSTALLDIR=C:\_vc\tasks"
            */
+
+          using (var md5 = MD5.Create())
+          {
+            /* USE MD5 check diff file
+             * - tasklist.conf contains data as puppet create
+             * - tasklist.conf.md5 is check by this.
+            using (var stream = File.OpenRead(filename))
+            {
+              return md5.ComputeHash(stream);
+            }
+             */ 
+          }
 
           using (TaskService tsMgr = new TaskService() )
           {
