@@ -1,0 +1,23 @@
+[
+  {
+    "puppet_jobname": "ldap_delta_job",
+    "name": "ldap_delta",
+    "file": "LDAP-Load-Delta.kjb",
+    "interval": 5,
+    "enabled": false
+  },
+  {
+    "puppet_jobname": "ldap_full_job",
+    "name": "ldap_full",
+    "file": "LDAP-Load.kjb",
+    "interval": 480,
+    "enabled": false
+  },
+  {
+    "puppet_jobname": "host_load_job",
+    "name": "host_load",
+    "file": "ES-Yamdb-Hosts.kjb",
+    "interval": 60,
+    "enabled": true
+  }
+]
