@@ -90,8 +90,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="TaskSchdChange_1_TemporaryKey.pfx" />
-    <None Include="TaskSchdChange_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
