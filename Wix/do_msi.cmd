@@ -1,24 +1,27 @@
 @echo off
-IF EXIST TaskScheChange ( rd /s /q TaskScheChange )
-mkdir TaskScheChange
+IF EXIST TaskSchdChange ( rd /s /q TaskSchdChange )
+mkdir TaskSchdChange
 
-copy ..\TaskSchdChange\bin\Release\Microsoft.Win32.TaskScheduler.dll TaskScheChange
-copy ..\TaskSchdChange\bin\Release\TaskSchdChange.exe TaskScheChange
-copy ..\TaskSchdChange\bin\Release\TaskSchdChange.exe.config TaskScheChange
+copy ..\TaskSchdChange\bin\Release\Microsoft.Win32.TaskScheduler.dll TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\TaskSchdChange.exe TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\TaskSchdChange.exe.config TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\Newtonsoft.Json.dll TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\Newtonsoft.Json.Schema.dll TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\Newtonsoft.Json.xml TaskSchdChange
+copy ..\TaskSchdChange\bin\Release\Newtonsoft.Json.Schema.xml TaskSchdChange
 
 IF EXIST tsk.wxs ( del /F tsk.wxs )
 IF EXIST taskschdchange.wxs ( del /F taskschdchange.wxs )
 copy taskschdchange.wxs.template taskschdchange.wxs
-copy erms.ico TaskScheChange
+copy erms.ico TaskSchdChange
 
-REM fnr.exe" --cl --dir "D:\_0Compass\ReleaseDashboard\_GitHub\TaskSchdChange\Wix" --fileMask "tsk.wxs" --excludeFileMask "*.dll, *.exe" --find "SourceDIR" --replace "SourceDir\TaskScheChange"
-REM SET wixbin="D:\WiX Toolset v3.9\bin"
-SET wixbin="T:\_GitCoding\wix39-binaries"
-SET workingdir="%~dp0TaskScheChange"
-SET wixobj="%~dp0TaskScheChange\*.wixobj"
+REM SET wixbin="T:\_GitCoding\wix39-binaries"
+SET wixbin="D:\WiX Toolset v3.9\bin"
+SET workingdir="%~dp0TaskSchdChange"
+SET wixobj="%~dp0TaskSchdChange\*.wixobj"
 SET heatfile="%~dp0tsk.wxs"
 SET mainfile="%~dp0taskschdchange.wxs"
-SET msifile="%~dp0TaskScheChange_%1.msi"
+SET msifile="%~dp0TaskSchdChange_%1.msi"
 SET fnrdir="%~dp0fnr.exe"
 SET wixfile="%~dp0"
 pushd %wixbin%
