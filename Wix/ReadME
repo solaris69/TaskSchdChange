@@ -1,6 +1,6 @@
 Build MSI by do_msi.cmd <version>
 Eg. do_msi.cmd 0.0.1
 
-To install msi, run msiexec /qn /i TaskScheChange_<version>.msi TARGETDIR=<target dir>
+To install msi, run msiexec /qn /i TaskSchdChange_<version>.msi TARGETDIR=<target dir>
 Eg. msiexec /qn i/ TaskScheChange_0.0.1.msi TARGETDIR=C:\_vc
 It will be installed in C:\_vc\TaskScheChange
